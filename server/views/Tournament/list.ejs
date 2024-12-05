@@ -1,0 +1,63 @@
+<!-- Include the shared header template -->
+<%- include ../Partials/header.ejs %>
+
+<!-- Include the shared main navigation bar -->
+<%- include ../Partials/main_nav.ejs %>
+
+<!-- Tournament Database Content -->
+<main class="container">
+    <div class="row">
+        <!-- Center the content on the page -->
+        <div class="offset-md-1 col-md-10">
+            <!-- Page title with custom styling -->
+            <h1 style="color: #FFFFFF; font-family: 'Arial', sans-serif; font-size: 100px;">Tournament List</h1>
+
+            <br>
+            <!-- Button to add a new Tournament -->
+            <a href="/tournamentslist/add" class="btn btn-outline-dark btn-lgy" role="button">
+                <i class="fas fa-plus-circle"></i> Add Tournament
+            </a>
+
+            <!-- Table displaying the Tournament log -->
+            <table class="table table-bordered table-striped table-hover shadow-sm">
+                <!-- Table headers -->
+                <tr class="d-flex">
+                    <th class="text-center col-2">Date</th>
+                    <th class="text-center col-2">Name</th>
+                    <th class="text-center col-2">Location</th>
+                    <th class="text-center col-2">Description</th>
+                </tr>
+
+                <!-- Loop through the TournamentList array to display each Tournament -->
+                <% for(let count = 0; count < TournamentList.length; count++) { %>
+                <tr class="d-flex">
+                    <td class="text-center col-2"><%= TournamentList[count].Date %></td>
+                    <td class="text-center col-2"><%= TournamentList[count].Name %></td>
+                    <td class="text-center col-2"><%= TournamentList[count].Location %></td>
+                    <td class="text-center col-2"><%= TournamentList[count].Description %></td>
+                    
+                    <!-- edit Button -->
+
+                    <td class="text-center col-2">
+                        <a href="/tournamentslist/edit/<%= TournamentList[count]._id %>" class="btn btn-outline-dark btn-lg">
+                            <i class="fas fa-pencil-alt"></i> Edit
+                        </a>
+                    </td>
+
+                    <!-- Delete button for the Tournament -->
+                    <td class="text-center col-2">
+                        <a href="/tournamentslist/delete/<%= TournamentList[count]._id %>" 
+                            class="btn btn-danger btn-sm" 
+                            onclick="return confirm('Are you sure you want to delete this tournament?');">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </a>
+                    </td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- Include the shared footer template -->
+<%- include ../Partials/footer.ejs %>

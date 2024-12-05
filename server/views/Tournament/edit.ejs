@@ -1,0 +1,56 @@
+<!-- Include the shared header template -->
+<%- include ../Partials/header.ejs %>
+
+<!-- Include the shared main navigation bar -->
+<%- include ../Partials/main_nav.ejs %>
+
+<!-- Content for the Edit Operation -->
+<div class="container">
+    <div class="row">
+        <!-- Center the form on the page -->
+        <div class="offset-md-3 col-md-6">
+            <!-- Page title dynamically set using template variable -->
+            <h1><%= title %></h1>
+            
+            <!-- Form for editing a Tournament -->
+            <form class="form" method="POST">
+                <!-- Input for Date with prefilled value from the Tournament object -->
+                <div class="form-group">
+                    <label for="DateTextField">Date</label>
+                    <input type="text" class="form-control" id="DateTextField" placeholder="Enter the Date" name="Date" value="<%= Tournament.Date %>" required>
+                </div>
+                
+                <!-- Input for namewith prefilled value -->
+                <div class="form-group">
+                    <label for="exerciseTextField">Name</label>
+                    <input type="text" class="form-control" id="exerciseTextField" placeholder="Enter the exercise" name="Exercise" value="<%= Tournament.Name%>" required>
+                </div>
+                
+                <!-- Input for Location with prefilled value -->
+                <div class="form-group">
+                    <label for="LocationTextField">Location</label>
+                    <input type="text" class="form-control" id="LocationTextField" placeholder="Enter the # of Location" name="Location" value="<%= Tournament.Location %>" required>
+                </div>
+                
+                <!-- Input for Description with prefilled value -->
+                <div class="form-group">
+                    <label for="DescriptionTextArea">Description</label>
+                    <input type="text" class="form-control" id="DescriptionTextArea" placeholder="Enter the # of Description" name="Description" value="<%= Tournament.Description %>" required>
+                </div>
+                
+                <!-- Submit button styled as primary with an edit icon -->
+                <button class="btn btn-primary" type="submit">
+                    Submit <i class="fas fa-edit"></i>
+                </button>
+                
+                <!-- Cancel button styled as warning with an undo icon -->
+                <button class="btn btn-warning" type="submit">
+                    Cancel <i class="fas fa-undo"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Include the shared footer template -->
+<%- include ../Partials/footer.ejs %>

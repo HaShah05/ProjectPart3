@@ -1,0 +1,43 @@
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <!-- Brand name with a link to the home page -->
+        <a class="navbar-brand" href="/">Tournament Creator</a>
+        
+        <!-- Toggle button for collapsing the navbar in smaller viewports -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar content, collapsible in smaller viewports -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto"> <!-- Align items to the right using `ms-auto` -->
+                <!-- Navigation item for Tournamnets -->
+                <li class="nav-item">
+                
+                    <% if(title == "Tournaments") { %> <!-- Highlight if the current page is "Tournaments" -->
+                        <a class="nav-link active" href="/tournamentslist">
+                    <% } else { %>
+                        <a class="nav-link" href="/tournamentslist">
+                    <% } %>
+                        <!-- Icon for the Tournaments menu -->
+                        <i class="fa-brands fa-dribbble"></i> Tournaments
+
+                    </a>
+                </li>
+                <% if (isLoggedIn) { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                <% } %>
+                
+            </ul>
+        </div>
+    </div>
+</nav>

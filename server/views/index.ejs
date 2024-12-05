@@ -1,0 +1,36 @@
+<!-- Include the shared header template -->
+<%- include Partials/header.ejs %>
+<link rel="stylesheet" href="/Content/app.css">
+
+
+<!-- Include the shared main navigation bar -->
+<%- include Partials/main_nav.ejs %>
+
+<!-- Main content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding for the document -->
+  <meta charset="UTF-8">
+  <!-- Ensure proper scaling and responsiveness on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Dynamically set the page title -->
+  <title><%= title %></title>
+</head>
+<body>
+  <!-- Splash screen container -->
+  <div class="splash-container">
+    <!-- Display a splash image -->
+    <img src="/Assets/images/logo.png" alt="Logo" class="splash-image">
+    <!-- Welcome message -->
+    <h1>Welcome to Tournament Creator</h1>
+    <!-- Description about the app -->
+    <p>Create your tournaments with ease and efficiency.</p>
+    <!-- Instruction to start using the app -->
+    <p>Click the button in the top right to get started!</p>
+  </div>
+</body>
+</html>
+
+<!-- Include the shared footer template -->
+<%- include Partials/footer.ejs %>

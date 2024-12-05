@@ -1,0 +1,56 @@
+<!-- Include the shared header template -->
+<%- include ../Partials/header.ejs %>
+
+<!-- Include the shared main navigation bar template -->
+<%- include ../Partials/main_nav.ejs %>
+
+<!-- Content for Add Page -->
+<div class="container">
+    <div class="row">
+        <!-- Centering the form on the page -->
+        <div class="offset-md-3 col-md-6">
+            <!-- Page title dynamically set with templating -->
+            <h1><%= title %></h1>
+            
+            <!-- Form for adding a workout -->
+            <form class="form" method="POST">
+                <!-- Input for Date -->
+                <div class="form-group">
+                    <label for="DateTextField">Date</label>
+                    <input type="text" class="form-control" id="DateTextField" placeholder="Enter the Date" name="Date" required>
+                </div>
+                
+                <!-- Input for name -->
+                <div class="form-group">
+                    <label for="nameTextField">Name</label>
+                    <input type="text" class="form-control" id="nameTextField" placeholder="Enter the name" name="Name" required>
+                </div>
+                
+                <!-- Input for location -->
+                <div class="form-group">
+                    <label for="locationTextField">Location</label>
+                    <input type="text" class="form-control" id="locationTextField" placeholder="Enter the location" name="Location" required>
+                </div>
+                
+                <!-- Input for description -->
+                <div class="form-group">
+                    <label for="descriptionTextArea">Description</label>
+                    <input type="text" class="form-control" id="descriptionTextArea" placeholder="Enter the description" name="Description" required>
+                </div>
+                
+                <!-- Submit button with an edit icon -->
+                <button class="btn btn-light" type="submit">
+                    Submit <i class="fas fa-edit"></i>
+                </button>
+                
+                <!-- Cancel button with an undo icon -->
+                <button class="btn btn-dark" type="submit">
+                    Cancel <i class="fas fa-undo"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Include the shared footer template -->
+<%- include ../Partials/footer.ejs %>
