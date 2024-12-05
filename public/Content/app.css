@@ -73,4 +73,30 @@ h1 {
     transform: scale(1.4)
 
 }
+/* Paragraphs */
+p {
+    font-size: 1.5rem;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+    margin: 10px auto;
+    max-width: 600px; 
+}
 
+/* Buttons */
+.btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    /* Slightly darker blue for hover effect */
+    background-color: #003d80; 
+    /* Subtle zoom effect */
+    transform: scale(1.3); 
