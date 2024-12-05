@@ -59,3 +59,18 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+.splash-image {
+    width: 300px;
+    height: auto;
+    margin: 40px auto;
+    display: block;
+    /*made the corners a bit more rounded so it looks more soft*/
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #eafaf1;
+}
+.splash-image:hover {
+    transform: scale(1.4)
+
+}
+
