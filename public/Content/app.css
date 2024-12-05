@@ -41,3 +41,13 @@ body {
     margin-right: 20px;
     transition: color 0.3s ease;
 }
+
+.navbar .nav-link:hover {
+    color: #ffdd57; /* Golden hover effect for contrast */
+    transform: scale(1.2);
+    
+}
+
+.navbar .nav-link i {
+    margin-right: 10px;
+}
